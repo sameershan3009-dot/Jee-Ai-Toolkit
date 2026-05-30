@@ -152,10 +152,19 @@ export default function RazorpayCheckout() {
 
       checkout.on("payment.failed", (response) => {
         setIsLoading(false);
+        const error = response.error;
+        const details = [
+          error?.description || error?.reason || "Payment failed.",
+          error?.code ? `Code: ${error.code}` : "",
+          error?.source ? `Source: ${error.source}` : "",
+          error?.step ? `Step: ${error.step}` : "",
+          error?.reason ? `Reason: ${error.reason}` : "",
+          error?.metadata?.order_id ? `Order: ${error.metadata.order_id}` : "",
+          error?.metadata?.payment_id ? `Payment: ${error.metadata.payment_id}` : ""
+        ].filter(Boolean);
+
         setStatus(
-          response.error?.description ||
-            response.error?.reason ||
-            "Payment failed. Please try another method."
+          details.length ? details.join(" | ") : "Payment failed. Please try another method."
         );
       });
 
