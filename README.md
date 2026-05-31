@@ -73,3 +73,10 @@ You do not need to buy a domain for the MVP. Use the Vercel URL for public testi
 - `POST /api/planner/generate`
 - `POST /api/pyq/analyze`
 - `POST /api/predict-rank`
+
+## MVP Product Routes
+
+- `/login` local student onboarding
+- `/dashboard` student workspace with overview, doubts, formulas, planner, PYQ, Pomodoro, rank predictor, and organic order explainer
+
+The current login is browser-local so the public MVP works without paid infrastructure. Connect Supabase Auth later to persist profiles across devices.

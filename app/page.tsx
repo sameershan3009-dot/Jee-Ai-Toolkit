@@ -53,15 +53,18 @@ export default function Home() {
             <a href="#credits" className="hover:text-neutral-950">
               Credits
             </a>
+            <a href="/dashboard" className="hover:text-neutral-950">
+              Dashboard
+            </a>
             <a href="/about" className="hover:text-neutral-950">
               About
             </a>
           </div>
           <a
-            href="#credits"
+            href="/login"
             className="rounded-full bg-neutral-950 px-4 py-2 text-sm font-medium text-white transition hover:bg-neutral-800"
           >
-            Try checkout
+            Sign in
           </a>
         </nav>
       </header>
@@ -80,10 +83,10 @@ export default function Home() {
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
-              href="#tools"
+              href="/login"
               className="inline-flex h-12 items-center justify-center rounded-full bg-neutral-950 px-6 text-sm font-semibold text-white transition hover:bg-neutral-800"
             >
-              Explore dashboard
+              Open dashboard
             </a>
             <a
               href="#credits"
@@ -181,12 +184,12 @@ export default function Home() {
         <div className="rounded-[2rem] border border-black/10 bg-white/80 p-6 shadow-sm backdrop-blur">
           <p className="text-sm font-medium text-neutral-500">Payments</p>
           <h2 className="mt-2 text-3xl font-semibold tracking-tight text-neutral-950">
-            Razorpay Standard Checkout is ready for test mode.
+            Razorpay Standard Checkout is ready.
           </h2>
           <p className="mt-4 text-sm leading-7 text-neutral-600">
-            You can deploy this to Vercel without buying a domain. Use the free
+            Deployed on Vercel without buying a domain. Use the free
             <span className="font-medium text-neutral-950"> .vercel.app </span>
-            URL for public testing, then add live Razorpay keys only after account activation.
+            URL for public testing and live Razorpay payments after account activation.
           </p>
         </div>
         <RazorpayCheckout />
@@ -207,6 +210,9 @@ export default function Home() {
           </a>
           <a href="/contact" className="hover:text-neutral-950">
             Contact
+          </a>
+          <a href="/dashboard" className="hover:text-neutral-950">
+            Dashboard
           </a>
           <a href="/privacy" className="hover:text-neutral-950">
             Privacy
